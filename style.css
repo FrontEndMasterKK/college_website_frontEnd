@@ -1,0 +1,407 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Anton', sans-serif;
+font-family: 'Kanit', sans-serif;
+font-family: 'Lilita One', cursive;
+font-family: 'Overpass', sans-serif;
+font-family: 'Questrial', sans-serif;
+font-family: 'Righteous', cursive;
+font-family: 'Roboto Mono', monospace;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+.bg{
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(rgb(40, 119, 131,0.5),rgb(40, 131, 104,0.5)),url("https://cdn.pixabay.com/photo/2016/08/18/23/04/yale-university-1604157_1280.jpg");
+    background-position: top;
+    background-size: cover;
+    position: relative;
+}
+.nav{
+    /* width: 100%; */
+    padding: 3% 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav img{
+    width: 150px;
+}
+/* .nav .nav-links ul li{ 
+    display: block;
+    padding: 20px;
+}
+.nav .nav-links { 
+    height: 100vh;
+    width: 200px;
+    background: red;
+    position: absolute;
+    top: 0;
+    right: -200px;
+    z-index: 2;
+    text-align: left;
+    transition: 1s;
+} */
+.nav .nav-links{
+    flex: 1;
+    text-align: right;
+
+}
+.nav .nav-links ul li{ 
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav .nav-links ul li a{
+    text-decoration: none;
+    color: white;
+}
+.nav .nav-links ul li::after{
+    content: '';
+    width: 0;
+    background: red;
+    height: 2px;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav .nav-links ul li:hover:after{
+    width: 100%;
+}
+
+.text{
+    width: 100%;
+    color: white;
+    position: absolute; 
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%); 
+    text-align: center;
+}
+.text h1{
+    font-size: 60px;
+}
+.text p{
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+.text a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 8px 8px;
+    position: relative;
+    /* background: transparent; */
+}
+.text a:hover{
+    background-color: red;
+    transition: 0.5s;
+}
+.nav i{
+    display: none;
+}
+/* .nav i{
+    display: block;
+    color: white;
+    margin: 10px;
+    cursor: pointer;
+} */
+.courses{
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    padding-top: 100px;
+}
+.courses h1{
+    font-size: 45px;
+}
+.courses p{
+    font-size: 15px;
+    padding-top: 10px;
+    padding-bottom: 80px;
+}
+.rows{
+    display: flex;
+    justify-content: space-between;
+}
+.programs{
+    box-sizing: border-box;
+    /* flex-basis: 31%; */
+    background: #fff3f3;
+    border-radius: 15px;
+    margin: 25px 25px;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+.programs:hover{
+    transition: 0.5s;
+    box-shadow: 5px 5px rgb(131, 128, 128,0.4);
+}
+.programs h1{
+    padding-top: 5px;
+    font-size: 22px;
+    padding-bottom: 2px;
+    font-weight: 540;
+}
+.programs p{
+    line-height: 1.4;
+    padding-bottom: 10px;
+    font-weight: 100;
+    font-size: 15px;
+} 
+.campus{
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    padding-top: 100px;
+}
+.campus h1{
+    font-size: 45px;
+}
+.campus p{
+    font-size: 15px;
+    padding-top: 10px;
+    padding-bottom: 80px;
+}
+.countries{
+    box-sizing: border-box;
+    /* flex-basis: 31%; */
+    border-radius: 40px;
+    margin: 25px 25px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.countries img{
+    height: 800px;
+    width: 800px;
+}
+.slide{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.slide:hover{
+    background: rgba(247, 8, 8, 0.4);
+    transition: 0.5s;
+
+}
+.slide p{
+    color: white;
+    width: 100%;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.slide:hover p{
+    bottom: 40%;
+    transition: 0.5s;
+}
+.facilities{
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    padding-top: 100px;
+}
+.facilities h1{
+    font-size: 45px;
+}
+.facilities p{
+    font-size: 15px;
+    padding-top: 10px;
+    padding-bottom: 80px;
+}
+.faci-col{
+    box-sizing: border-box;
+    flex-basis: 31%;
+    border-radius: 15px;
+    margin: 25px 25px;
+    padding: 5px 15px;
+}
+.faci-col img{
+    display: block;
+    border-radius: 40px;
+    width: 500px;
+    height: 300px;
+    margin-bottom: 20px;
+}
+.faci-col h1{
+    padding-top: 5px;
+    font-size: 30px;
+    padding-bottom: 2px;
+    font-weight: 600;
+}
+.faci-col p{
+    line-height: 1.4;
+    padding-bottom: 10px;
+    font-weight: 100;
+    font-size: 15px;
+} 
+.testimonials{
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    padding-top: 100px;
+}
+.testimonials h1{
+    font-size: 45px;
+}
+.testimonials p{
+    font-size: 15px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+/* .programs{
+} */
+.review{
+    overflow: hidden;
+    position: relative;
+    background: #fff3f3;
+    margin: 25px 25px;
+    border-radius: 40px;
+    box-sizing: border-box;
+    padding: 25px 25px;
+    display: flex;
+}
+.review img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.rating{
+    padding-left: 20px;
+    text-align: left;
+}
+.rating p{
+    font-size: 12px;
+    
+}
+.rating h1{    
+    font-size: 20px;
+}
+.enroll{
+    width: 80%;
+    margin: 100px auto;
+    text-align: center;
+    padding: 20px 20px;
+    border-radius: 15px;
+    position: relative;
+    background-image: linear-gradient(rgb(40, 119, 131,0.5),rgb(40, 131, 104,0.5)),url("https://cdn.pixabay.com/photo/2016/05/18/11/25/library-1400313_1280.jpg");
+}
+.enroll h1{
+    font-size: 40px;
+    color: whitesmoke;
+    padding-bottom: 20px;
+}
+.enroll a{
+    /* padding-top: 15px; */
+    width: 100%;
+    border: 1px solid white;
+    padding: 8px 8px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+.enroll a:hover{
+    background-color: red;
+    transition: 0.5s;
+}
+.footer{
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    padding-top: 20px;
+}
+.footer h1{
+    padding-top: 5px;
+    font-size: 30px;
+    padding-bottom: 25px;
+    font-weight: 600;
+}
+.footer p{
+    line-height: 1.4;
+    font-weight: 100;
+    font-size: 15px;
+} 
+.footer i{
+    padding-top: 20px;
+    cursor: pointer;
+    color: orange;
+}
+@media(max-width:700px) {
+    .nav img{
+        width: 80px;
+    }
+    .text h1{
+        font-size: 40px;
+    }
+    .nav .nav-links ul li{ 
+        display: block;
+        padding: 20px;
+    }
+    .nav .nav-links { 
+        height: 100vh;
+        width: 200px;
+        background: red;
+        position: absolute;
+        top: 0;
+        right: -200px;
+        z-index: 2;
+        text-align: left;
+        transition: 1s;
+    }
+    .nav i{
+        display: block;
+        color: white;
+        margin: 10px;
+        cursor: pointer;
+    }
+    .rows{
+        flex-direction: column;
+    }
+    .courses h1{
+        font-size: 25px;
+    }
+    .programs h1{
+        font-size: 22px;
+    }
+    .campus h1{
+        font-size: 25px;
+    }
+    .facilities h1{
+        font-size: 25px;
+    }
+    .faci-col h1{
+        font-size: 20px;
+    }
+    .faci-col img{
+        width: 300px;
+        height: 150px;
+    }
+    .enroll h1{
+        font-size: 22px;
+    }
+    .enroll a{
+        font-size: 12px;
+    }
+    .testimonials h1{
+        font-size: 25px;
+    }
+    .footer h1{
+        font-size: 18px;
+    }
+    .footer p{
+        font-size: 12px;
+    }
+}
